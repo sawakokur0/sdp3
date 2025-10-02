@@ -76,20 +76,19 @@ Reliability: Comprehensive error handling and validation
 Clarity: Self-documenting code with meaningful names
 
 Usage Example
-java
-// Initialize the adapter with concrete implementations
+Initialize the adapter with concrete implementations
 DataParserAdapter adapter = new DataParserAdapter(
     new JsonParserImpl(), 
     new XmlParserImpl()
 );
 
-// Convert XML to JSON
+Convert XML to JSON
 String json = adapter.xmlToJson("<data><value>123</value></data>");
 
-// Convert JSON to XML
+Convert JSON to XML
 String xml = adapter.jsonToXml("{\"key\": \"value\"}");
 
-// Universal data parsing
+Universal data parsing
 Map<String, String> data = adapter.parseData("<item>test</item>", "xml");
 Architecture Benefits
 Loose Coupling: Dependencies injected through interfaces
